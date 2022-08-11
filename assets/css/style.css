@@ -82,8 +82,7 @@ main {
 }
 
 #aboutContainer,
-#work,
-#cardsContainer {
+#work {
   width: 100%;
   display: flex;
   align-items: center;
@@ -116,7 +115,7 @@ main {
 /* On screens that are 600px wide or less, make things stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   #aboutContainer,
-  #cardsContainer,
+  #smallCards,
   #contactContainer {
     flex-direction: column;
   }
@@ -132,18 +131,17 @@ main {
 
 #cardsContainer {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  padding: 1%;
 }
 
-.mainCard {
-  display: flex;
-  flex: 100%;
-  padding: 1% 1% 0% 1%;
-  align-items: flex-end;
+#cardsContainer a {
   opacity: 60%;
   transition: 0.5s;
 }
-.mainCard:hover {
+
+#cardsContainer a:hover {
   opacity: 100%;
   /* make it bigger when hovering */
   transform: scale(101%);
@@ -151,40 +149,41 @@ main {
   z-index: 1;
 }
 
-.mainCard img {
+.mainCard img,
+.card img {
   width: 100%;
   max-height: 600px;
   /* Get rid of the gap at the bottom */
   display: block;
   /* Keep the aspect ratio, clip to fit */
   object-fit: cover;
-  /* change cursor to pointer */
-  cursor: pointer;
 }
 
-.card {
+#smallCards {
   display: flex;
-  align-items: flex-end;
-  flex: 48%;
-  padding: 1%;
-  cursor: pointer;
+}
+
+#smallCards a {
+  flex: 50%;
   opacity: 60%;
   transition: transform 0.5s;
 }
 
-.card:hover {
+#smallCards a:hover {
   opacity: 100%;
   transform: scale(1.05);
   z-index: 1;
 }
 
+.card,
+.mainCard {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px
+}
+
 .card img {
-  width: 100%;
   max-height: 400px;
-  /* Get rid of the gap at the bottom */
-  display: block;
-  /* Keep the aspect ratio, clip to fit */
-  object-fit: cover;
 }
 
 .card h3,
@@ -234,6 +233,7 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
 footer p span {
   /* change heart color to red */
   color: red;
