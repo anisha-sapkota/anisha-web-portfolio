@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Google Fonts - Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anisha's Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="./assets/images/anisha-banner.jpg"
+        alt="Photo of Anisha at Cape Banks."
+      />
+      <h1>Anisha</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#work">Work</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section id="about">
+        <h2>About me</h2>
+        <div id="aboutContainer">
+          <img
+            id="avatarImage"
+            src="./assets/images/anisha-avatar.jpeg"
+            alt="Anisha smiling"
+          />
+          <p>Hi there! I am Anisha Sapkota, an aspiring web developer.</p>
+        </div>
+      </section>
+      <section id="work">
+        <h2>My work</h2>
+        <div id="cardsContainer">
+          <div class="mainCard">
+            <img
+              src="./assets/images/todo.jpg"
+              alt="Top view of todo list on a table"
+            />
+            <h3>Todo list</h3>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/hourglass.jpg"
+              alt="Hourglass on a tabletop"
+            />
+            <h3>Timer</h3>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/images/interest.jpg"
+              alt="Stacks of coins and a calculator"
+            />
+            <h3>Interest Calculator</h3>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <div id="contactContainer">
+          <form action="#">
+            <label for="name">Full name:</label><br />
+            <input type="text" id="name" name="name" required /><br />
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="Email" required /><br />
+            <label for="message">Message:</label><br />
+            <textarea name="message" id="message" cols="30" rows="10" required>
+            </textarea>
+            <br /><br />
+            <input id="submitButton" type="submit" value="Submit" />
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Made with <span>&#10084;</span> by Anisha Sapkota</p>
+    </footer>
+  </body>
+</html>

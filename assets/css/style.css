@@ -1,0 +1,240 @@
+* {
+  /* set all margins to 0 */
+  margin: 0px;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  background-color: #333333;
+  color: white;
+}
+
+header {
+  width: 100%;
+  max-height: 500px;
+  display: flex;
+  /* for text to appear on top and center */
+  justify-content: center;
+  align-items: center;
+}
+
+header img {
+  width: 100%;
+  max-height: 500px;
+  /* Get rid of the gap at the bottom */
+  display: block;
+  /* Keep the aspect ratio, clip to fit */
+  object-fit: cover;
+}
+
+header h1 {
+  /* to make text appear on top of other elements */
+  position: absolute;
+}
+
+nav {
+  display: flex;
+  background-color: #008080;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul {
+  list-style-type: none;
+  color: white;
+  align-items: center;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-flex;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a:active,
+nav ul li a:hover {
+  /* change color when active and hovering */
+  color: #ff9933;
+}
+
+main {
+  padding: 0 2%;
+}
+
+#about,
+#work,
+#contact {
+  border: 1px;
+  border-style: solid;
+  margin: 5px 0px;
+  display: flex;
+  align-items: center;
+}
+
+#aboutContainer,
+#work,
+#cardsContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about h2,
+#work h2,
+#contact h2 {
+  /* Don't wrap h2 */
+  white-space: nowrap;
+  padding: 2%;
+  font-size: xx-large;
+}
+
+#about p {
+  padding: 2%;
+  text-align: center;
+}
+
+/* On screens that are 992px wide or less, make the heading and div stack on top of each other instead of next to each other */
+@media screen and (max-width: 992px) {
+  #about,
+  #work,
+  #contact {
+    flex-direction: column;
+  }
+}
+
+/* On screens that are 600px wide or less, make things stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  #aboutContainer,
+  #cardsContainer,
+  #contactContainer {
+    flex-direction: column;
+  }
+}
+
+#avatarImage {
+  max-height: 250px;
+  border-radius: 50%;
+  padding: 2%;
+  /* Keep the aspect ratio, clip to fit */
+  object-fit: cover;
+}
+
+#cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainCard {
+  display: flex;
+  flex: 100%;
+  padding: 1% 1% 0% 1%;
+  align-items: flex-end;
+  opacity: 60%;
+  transition: 0.5s;
+}
+.mainCard:hover {
+  opacity: 100%;
+  /* make it bigger when hovering */
+  transform: scale(101%);
+  /* make it appear on top */
+  z-index: 1;
+}
+
+.mainCard img {
+  width: 100%;
+  max-height: 600px;
+  /* Get rid of the gap at the bottom */
+  display: block;
+  /* Keep the aspect ratio, clip to fit */
+  object-fit: cover;
+  /* change cursor to pointer */
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  align-items: flex-end;
+  flex: 48%;
+  padding: 1%;
+  cursor: pointer;
+  opacity: 60%;
+  transition: transform 0.5s;
+}
+
+.card:hover {
+  opacity: 100%;
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.card img {
+  width: 100%;
+  max-height: 400px;
+  /* Get rid of the gap at the bottom */
+  display: block;
+  /* Keep the aspect ratio, clip to fit */
+  object-fit: cover;
+}
+
+.card h3,
+.mainCard h3 {
+  position: absolute;
+  background-color: #008080;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+#contact {
+  display: flex;
+  align-items: center;
+}
+
+#contactContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+#submitButton {
+  background-color: #008080;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+}
+
+#submitButton:hover {
+  /* on hover, change the background color and text color */
+  background-color: #005959;
+  color: #ff9933;
+}
+
+footer {
+  /* Push footer to bottom */
+  margin-top: auto;
+  background-color: #111111;
+  color: white;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer p span {
+  /* change heart color to red */
+  color: red;
+}
