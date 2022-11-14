@@ -8,7 +8,7 @@ Repository for my professional web portfolio.
 
 The project can be viewed live at this [url](https://anisha-sapkota.github.io/anisha-web-portfolio/) and the screenshot below.
 
-![Screenshot](./assets/images/screenshot.jpg)
+![Screenshot](./assets/images/screenshot.png)
 
 ## Helpful resources
 
